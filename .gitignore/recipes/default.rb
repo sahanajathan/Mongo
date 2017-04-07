@@ -1,4 +1,4 @@
-cookbook_file "/home/ec2-user/mongo_install.sh" do
+cookbook_file "./mongo_install.sh" do
   source "mongo_install.sh"
   mode 0755
 
@@ -6,6 +6,6 @@ cookbook_file "/home/ec2-user/mongo_install.sh" do
 
 
  execute 'installagent' do
-  command '/home/ec2-user/mongo_install.sh'
+  command './mongo_install.sh'
 end
 
